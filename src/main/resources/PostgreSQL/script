@@ -1,0 +1,8 @@
+CREATE TABLE countries (
+	id SERIAL primary key,
+	name varchar(255) not null,
+	ad varchar(50) not null
+)
+
+insert into countries(name, ad) values('THAILAND','TH')
+insert into countries(name, ad) values('United States','USA')
