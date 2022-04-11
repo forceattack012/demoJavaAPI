@@ -6,3 +6,16 @@ CREATE TABLE countries (
 
 insert into countries(name, ad) values('THAILAND','TH')
 insert into countries(name, ad) values('United States','USA')
+
+
+CREATE TABLE cities (
+	id SERIAL primary key,
+	name varchar(255) not null,
+	country_id INT,
+    CONSTRAINT fk_country
+      FOREIGN KEY(id) 
+	  REFERENCES countries(id)
+)
+
+insert into cities(name,country_id) values('Bangkok',1)
+insert into cities(name, country_id) values('Miami',2)

@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Table(name="countries")
 public class Country {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "country_generator")
 	private long id;
 	
 	@Column(name="name")
